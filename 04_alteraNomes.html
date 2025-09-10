@@ -8,11 +8,16 @@
     */
 
     //Entrada
-
+    let listaNomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
 
     //Processamento
-
+    for(let nome of listaNomes){
+        let tirarAcentoA = nome.replace("à", "a");
+        let tirarAcentoE = nome.replace("é", "e");
+        let tirarAcentoU = nome.replace("ú", "u");
+    }
 
     //Saída
+    alert(`A lista é ${listaNomes.join(", ")}`);
 
 </script>

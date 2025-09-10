@@ -6,11 +6,26 @@
     */
 
     //Entrada
-
+    const palavra = prompt(`Informe uma palavra`).toUpperCase().trim();
+    let soletrando = Array.from(palavra);
+    let vogais = [];
+    let consoantes = [];
 
     //Processamento
+    for (let letra of soletrando){
+
+        if(letra == "A" || letra == "E" || letra == "I" || letra == "O" || letra == "U"){
+            vogais.push(letra);
+        } else{
+            consoantes.push(letra)
+        }
+    }
+
+    let tamanhoVogais = vogais.length;
+    let tamanhoConsoantes = consoantes.length;
 
 
     //Saída
+    alert(`A quantidade de vogais que existem nessa palavra são ${tamanhoVogais}, e de consoantes ${tamanhoConsoantes}.`);
 
 </script>
