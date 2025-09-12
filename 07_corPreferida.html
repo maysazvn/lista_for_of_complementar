@@ -8,11 +8,26 @@
     */
 
     //Entrada
-
+     let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+     let coresPreferidas = [];
+     let outrasCores = [];
 
     //Processamento
+    for (let favorita of cores){
+        const pergunta = prompt(`Você gosta da cor ${favorita}? Digite S - Sim e N - Não.`).toUpperCase().trim();
 
+        if(pergunta == "S"){
+            coresPreferidas.push(favorita);
+        } else if(pergunta == "N"){
+            outrasCores.push(favorita);
+        } else{
+            alert(`Resposta inválida.`);
+        }
+    }
+
+    let tamanho = coresPreferidas.length
 
     //Saída
+    alert(`Suas cores preferidas são ${coresPreferidas.join(", ")} e são ${tamanho} cores.`)
 
 </script>

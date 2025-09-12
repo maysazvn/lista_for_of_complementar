@@ -10,17 +10,18 @@
     const notasAluno = [7, 5, 9, 8];
     
     let ordem = notasAluno.sort((a, b) => a - b);
-    let media = [];
     let menorNota = ordem[0];
     let maiorNota = ordem[notasAluno.length - 1];
 
     //Processamento
     for (let nota of notasAluno){
-        let media = nota/notasAluno.length;
+        
     }
+    
+    let media = nota/notasAluno.length;
 
     //Saída
 
-    alert(`Das notas ${notasAluno.join(", ")}, a menor nota do aluno foi ${menorNota}, a maior foi ${maiorNota} e a média foi ${media.join(", ")}`)
+    alert(`Das notas ${notasAluno.join(", ")}, a menor nota do aluno foi ${menorNota}, a maior foi ${maiorNota} e a média foi ${media}`)
 
 </script>

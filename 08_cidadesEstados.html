@@ -8,11 +8,41 @@
     */
 
     //Entrada
-
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    let rs = [];
+    let pr = [];
+    let sc = [];
 
     //Processamento
+    for (let cidade of cidades) {
+        const pergunta = prompt(`A cidade ${cidade} é de qual estado? Digite RS - Rio Grande do Sul, PR - Paraná e SC - Santa Catarina`);
 
+        if (pergunta == "RS") {
+            rs.push(cidade);
+        } else if (pergunta == "PR") {
+            pr.push(cidade);
+        } else {
+            sc.push(cidade);
+        }
+    }
+
+    let tamanhoRS = rs.length;
+    let tamanhoPR = pr.length;
+    let tamanhoSC = sc.length;
 
     //Saída
+    if(tamanhoRS > tamanhoPR > tamanhoSC){
+        alert(`As ${tamanhoRS} cidades do RS são ${rs.join(", ")}, as ${tamanhoPR} cidade do PR são ${pr.join(", ")} e as ${tamanhoSC} cidade de SC são ${sc.join(", ")}`);
+    } else if(tamanhoRS > tamanhoSC > tamanhoPR){
+        alert(`As ${tamanhoRS} cidades do RS são ${rs.join(", ")}, as ${tamanhoSC} cidade de SC são ${sc.join(", ")} e as ${tamanhoPR} cidade de PR são ${pr.join(", ")}`);
+    } else if(tamanhoSC > tamanhoRS > tamanhoPR){
+        alert(`As ${tamanhoSC} cidades de SC são ${sc.join(", ")}, as ${tamanhoRS} cidade de RS são ${rs.join(", ")} e as ${tamanhoPR} cidade do PR são ${pr.join(", ")}`);
+    } else if(tamanhoSC > tamanhoPR > tamanhoRS){
+        alert(`As ${tamanhoSC} cidades de SC são ${sc.join(", ")}, as ${tamanhoPR} cidade do PR são ${pr.join(", ")} e as ${tamanhoRS} cidade do RS são ${rs.join(", ")}`);
+    } else if(tamanhoPR > tamanhoRS > tamanhoSC){
+        alert(`As ${tamanhoPR} cidades do PR são ${pr.join(", ")}, as ${tamanhoRS} cidade de RS são ${rs.join(", ")} e as ${tamanhoSC} cidade de SC são ${sc.join(", ")}`);
+    } else if(tamanhoPR > tamanhoSC > tamanhoPR){
+        alert(`As ${tamanhoPR} cidades do PR são ${pr.join(", ")}, as ${tamanhoSC} cidade de SC são ${sc.join(", ")} e as ${tamanhoPR} cidade do PR são ${pr.join(", ")}`);
+    }
 
 </script>
