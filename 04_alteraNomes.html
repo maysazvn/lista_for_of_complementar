@@ -11,13 +11,26 @@
     let listaNomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
 
     //Processamento
-    for(let nome of listaNomes){
-        let tirarAcentoA = nome.replace("à", "a");
-        let tirarAcentoE = nome.replace("é", "e");
-        let tirarAcentoU = nome.replace("ú", "u");
+    let tirandoAcento = [];
+
+    for (let nome of listaNomes) {
+        
+
+        if (nome.indexOf("á") > 0) {
+            let tirarAcentoA = nome.replace("á", "a");
+            tirandoAcento.push(tirarAcentoA);
+        } else if (nome.indexOf("é") > 0) {
+            let tirarAcentoE = nome.replace("é", "e");
+            tirandoAcento.push(tirarAcentoE);
+        } else if (nome.indexOf("ú") > 0){
+            let tirarAcentoU = nome.replace("ú", "u");
+            tirandoAcento.push(tirarAcentoU);
+        } else{
+            tirandoAcento.push(nome);
+        }
     }
 
     //Saída
-    alert(`A lista é ${listaNomes.join(", ")}`);
+    alert(`A lista de nomes corrigida é ${tirandoAcento.join(", ")}`);
 
 </script>
